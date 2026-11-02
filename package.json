@@ -1,0 +1,38 @@
+{
+  "name": "ved-scout-public",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "@vercel/firewall": "1.2.6",
+    "leaflet": "1.9.4",
+    "lucide-react": "0.563.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-leaflet": "5.0.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.0",
+    "@types/leaflet": "1.9.21",
+    "@types/node": "20.19.9",
+    "@types/react": "19.2.13",
+    "@types/react-dom": "19.2.3",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  },
+  "pnpm": {
+    "overrides": { "postcss": "8.5.32", "sharp": "0.35.5" },
+    "onlyBuiltDependencies": ["sharp", "@swc/core", "esbuild"]
+  }
+}
